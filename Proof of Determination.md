@@ -117,7 +117,7 @@ function emitTokens(uint256 _amount, address _destAddr) onlyValidator {
 If the validator attempts to emit tokens improperly or with the incorrect details, then other validators can block the transaction and even slash the validator. This should be codified prior to the network launch. 
 
 
-Since the liquidity pool bonds PoS tokens to Ether using the `X*Y=K` model, [(implementation)](https://github.com/thorchain/Resources/blob/master/Whitepapers/ASGARDEX/clp-implementation.md), it allows anyone to purchase emitted tokens from the pool at any price they deem is worthwhile. Placing ether in the pool causes the token price to increase as they are emitted in accordance with the `X*Y=K` model. Since the block reward is continually placed in the pool, the price will continually reset back down to fair market prices. 
+Since the liquidity pool bonds PoS tokens to Ether using the `X*Y=K` model, [(implementation)](https://github.com/Legaler/Whitepapers/blob/master/Continuous%20Liquidity%20Pools.md), it allows anyone to purchase emitted tokens from the pool at any price they deem is worthwhile. Placing ether in the pool causes the token price to increase as they are emitted in accordance with the `X*Y=K` model. Since the block reward is continually placed in the pool, the price will continually reset back down to fair market prices. 
 
 If the network chooses to remove the bridge after the network is bootstrapped (`m` validators) then the liquidity block reward should be removed by the validators, and the residual balance in the contract should be destroyed. On the ethereum side, the ether will be locked forever, since it is no longer necessary. 
 
